@@ -1,0 +1,31 @@
+Cmd for to start Zookeeper server:
+
+.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+
+-------------------------------------------------------------------------
+
+Cmd for to start kafka-server:
+
+.\bin\windows\kafka-server-start.bat .\config\server.properties
+
+-------------------------------------------------------------------------
+
+Cmd for created the topic:
+
+.\bin\windows\kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 4 --topic FirstTopic
+
+------------------------------------------------------------------------
+
+Cmd for To see the created topics:
+
+Cmd for producer :
+
+.\bin\windows\kafka-console-producer.bat --broker-list localhost:9092 --topic FirstTopic
+
+--------------------------------------------------------------------------
+
+Cmd for consumer:
+
+.\bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic FirstTopic --from-beginning
+
+
